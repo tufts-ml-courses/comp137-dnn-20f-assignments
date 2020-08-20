@@ -2,16 +2,16 @@
 
 ## Policies 
 
-* Collaboration: Discussions are highly encouraged, but all work need to be completed by individuals or teams independently. You can communicate your ideas verbally or by hand drawings, but you **cannot** share your code or report with each other. If you need to use online code, you need to download corresponding packages or files and import the functions or classes you want to use.
+* **Collaboration**: Discussions are highly encouraged, but all work need to be completed by individuals or teams independently. You can communicate your ideas verbally or by handwritten notes, but you *cannot* share your code or report with each other. If you need to use codes from online resources, you need to download corresponding packages or files and import the functions or classes you want to use. You need to clearly acknowledge the usage of these resources.
 
-* Late submissions: Every student get 3 free tickets representing 3 extra days you can spend on your projects. If all tickets are used up, a late submission gets its points discounted by 50% if it is within 24 hours after the deadline and zero points if it is later. 
+* **Late submissions**: Every student get 3 free tickets representing 3 extra days you can spend on your projects. If all tickets are used up, a late submission gets its points discounted by 50% if it is within 24 hours after the deadline and zero points if it is later. If a group project is late, then it falls to all group members, and everyone's share is calculated separately. 
 
 
 ## Set up your environment 
 
 All assignments requires python programming. Please use [Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) to manage your python packages. The [installation of Anaconda](https://docs.anaconda.com/anaconda/install/) does not require a root user or an administrator. 
 
-We will use these packages with their default versions listed here. We will also use packages such as `numpy` and `scipy`, whose versions are not important as long as they work with tensorflow and pytorch. 
+We will use these packages with their default versions listed below. We will also use packages such as `numpy` and `scipy`, whose versions are not important as long as they work with these packages below. 
 
 * `python=3.7`
 * `tensorflow=2.2` (or `tensorflow-gpu`)
