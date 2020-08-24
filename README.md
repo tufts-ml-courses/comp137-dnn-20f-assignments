@@ -1,6 +1,25 @@
 # Comp137 Deep Neural Networks @ Tufts
 
-## Policies 
+
+## Reading materials  
+
+The first part of this course will be based on [``Deep Learning'' by Goodfellow et al.](https://www.deeplearningbook.org/). The book is easy to read. We do not have time to cover all materials in this book. We will cover the following content from this book.  
+
+* Chapter 4.1 through 4.3: a basis for numerical optimization. 
+
+* Chapter 5: a good review of machine learning basics. 
+
+* Chapter 6:  feedforward neural networks and backpropagation
+
+* Chapter 7.1, 7.4, 7.8, and 7.12: ingredients of regularizing deep models 
+
+* Chapter 8.1 through 8.5: optimization methods for training deep models
+
+* Chapter 9.1 - 9.3: convolutional neural networks 
+
+* Chapter 10.1, 10.2.1, 10.2.2, 10.5, 10.7, and 10.10: recurrent neural networks 
+
+## Assignment Policies 
 
 * **Collaboration**: Discussions are highly encouraged, but all work need to be completed by individuals or teams independently. You can communicate your ideas verbally or by handwritten notes, but you *cannot* share your code or report with each other. If you need to use codes from online resources, you need to download corresponding packages or files and import the functions or classes you want to use. You need to clearly acknowledge the usage of these resources.
 
@@ -11,15 +30,16 @@
 
 All assignments requires python programming. Please use [Anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html) to manage your python packages. The [installation of Anaconda](https://docs.anaconda.com/anaconda/install/) does not require a root user or an administrator. 
 
-We will use these packages with their default versions listed below. We will also use packages such as `numpy` and `scipy`, whose versions are not important as long as they work with these packages below. 
+We will use these packages with their default versions listed below. The versions of the last few packages are not important as long as they work with these packages below. 
 
 * `python=3.7`
-* `tensorflow=2.2` (or `tensorflow-gpu`)
 * `pytorch=1.6`
+* `numpy`
+* `matplotlib` 
 
 Once you have installed Anaconda, you can create an environment by  
 ```
-conda create -n dnn python=3.7 tensorflow=2.2
+conda create -n dnn python=3.7
 ```
 
 Then you can enter this environment by 
@@ -29,9 +49,13 @@ conda activate dnn
 
 Inside the environment you can install `pytorch` by
 ```
-conda install pytorch -c pytorch
+conda install pytorch torchvision -c pytorch
 ```
 
+You also need to install `jupyter notebook`, which can be installed by Anaconda.
+```
+conda install -c conda-forge notebook
+```
 
 ## Computing resource
 
