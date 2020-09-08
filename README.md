@@ -1,4 +1,4 @@
-# Comp137 Deep Neural Networks @ Tufts
+# [Comp137 Deep Neural Networks @ Tufts](https://www.eecs.tufts.edu/~liulp/courses/comp137-2020-fall/)
 
 
 ## Assignment Policies 
