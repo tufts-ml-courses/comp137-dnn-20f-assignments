@@ -31,7 +31,7 @@ conda activate dnn
 
 Inside the environment you can install `tensorflow` by
 ```
-conda install tensorflow==2.3 
+pip install tensorflow==2.3 
 ```
 
 You also need to install `jupyter notebook`, which can be installed by Anaconda.
