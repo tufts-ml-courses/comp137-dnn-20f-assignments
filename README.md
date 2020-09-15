@@ -46,7 +46,7 @@ Google cloud credits will be provided through a private channel.
 
 ## Assignment List
 
-* Assignment 1 (to be anounced)
+* [Assignment 1](./assignment1/)
 * Assignment 2 (to be anounced)
 * Assignment 3 (to be anounced)
 * Assignment 4 (to be anounced)
