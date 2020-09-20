@@ -16,6 +16,8 @@ We will use these packages with their default versions listed below. The version
 
 * `python=3.7`
 * `tensorflow=2.3`
+* `scipy=1.5.2`
+* `scikit-learn=0.23`
 * `numpy`
 * `matplotlib` 
 
