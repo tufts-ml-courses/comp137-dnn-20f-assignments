@@ -51,13 +51,18 @@ class DenseLayer(tf.keras.layers.Layer):
 
         # set initial values for weights and bias terms. 
         # Note: bad initializations may lead to bad performance later
-        if param_init is None:
-            param_init = dict()
-            param_init['W'] = None #
-            param_init['b'] = None # 
+
+        param_init = dict(W=None, b=None)
+
+        if param_init == 'autograder':
+            np.random.seed(137)
+            param_init['W'] = np.random.random_sample((input_dim, output_dim)) 
+            param_init['b'] = np.random.random_sample((output_dim, )) 
+        else:
+            # please do your own initialization here    
             
         
-        # Initialize necessary variables
+        # Initialize necessary tf variables with `param_init`
        
 
     def call(self, inputs, training=None, mask=None):
@@ -139,7 +144,7 @@ class Feedforward(tf.keras.Model):
 def train(x_train, y_train, x_val, y_val, depth, hidden_sizes, reg_weight, num_train_epochs, task_type):
 
     """
-    Train this neural network using stochastic gradient descent.
+    Train this neural network.
 
     args:
       x_train: `np.array((N, D))`, training data of N instances and D features.
@@ -166,6 +171,9 @@ def train(x_train, y_train, x_val, y_val, depth, hidden_sizes, reg_weight, num_t
 
 
     # initialize an opimizer
+    # Note: we have not talked about advanced optimization algorithms such as adagrad, adam, SGD with momentum, etc., 
+    # but you may want try these opimization algorithms because they are generally more effective than the basic SGD.  
+    # You can find more details about these algorithms in Ch8 of the DL book or Ch11 of the D2L book 
     
 
     # decide the loss for the learning problem
