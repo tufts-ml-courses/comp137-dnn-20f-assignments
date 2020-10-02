@@ -52,14 +52,15 @@ class DenseLayer(tf.keras.layers.Layer):
         # set initial values for weights and bias terms. 
         # Note: bad initializations may lead to bad performance later
 
-        param_init = dict(W=None, b=None)
 
         if param_init == 'autograder':
+            param_init = dict(W=None, b=None)
             np.random.seed(137)
             param_init['W'] = np.random.random_sample((input_dim, output_dim)) 
             param_init['b'] = np.random.random_sample((output_dim, )) 
         else:
             # please do your own initialization here    
+            # You can pass in your own initialization through `param_init` or do random initialization here.  
             
         
         # Initialize necessary tf variables with `param_init`
