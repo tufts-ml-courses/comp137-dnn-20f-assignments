@@ -151,9 +151,7 @@ def train(x_train, y_train, x_val, y_val, depth, hidden_sizes, reg_weight, num_t
     """
     Train the neural network defined above.
 
-    NOTE: args and kwargs can be used to provide extra parameters, such as parameters for data normalization. But the 
-    implementation needs to be able to run without *args or **kwargs because the autograder cannot provide these 
-    arguments. 
+    NOTE: args and kwargs can be used to provide extra parameters, such as parameters for data normalization.
 
     args:
       x_train: `np.array((N, D))`, training data of N instances and D features.
