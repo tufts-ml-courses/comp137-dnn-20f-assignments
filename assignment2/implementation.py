@@ -91,12 +91,16 @@ class Feedforward(tf.keras.Model):
     A feedforward neural network. 
     """
 
-    def __init__(self, input_size, depth, hidden_sizes, output_size, reg_weight, task_type):
+    def __init__(self, input_size, depth, hidden_sizes, output_size, reg_weight, task_type, *args, **kwargs):
 
         """
         Initialize the model. This way of specifying the model architecture is clumsy, but let's use this straightforward
         programming interface so it is easier to see the structure of the program. Later when you program with keras 
         layers, please think about how keras layers are implemented to take care of all components.  
+
+        NOTE: args and kwargs can be used to provide extra parameters, such as parameters for data normalization. But the 
+        implementation needs to be able to run without *args or **kwargs because the autograder cannot provide these 
+        arguments. 
 
         args:
           input_size: integer, the dimension of the input.
@@ -106,6 +110,7 @@ class Feedforward(tf.keras.Model):
           output_size: integer, the number of classes. In our regression problem, please use 1. 
           reg_weight: float, The weight/strength for the regularization term.
           task_type: string, 'regression' or 'classification'. The task type. 
+
         """
 
         super(Feedforward, self).__init__()
@@ -141,10 +146,14 @@ class Feedforward(tf.keras.Model):
         return outputs
 
 
-def train(x_train, y_train, x_val, y_val, depth, hidden_sizes, reg_weight, num_train_epochs, task_type):
+def train(x_train, y_train, x_val, y_val, depth, hidden_sizes, reg_weight, num_train_epochs, task_type, *args, **kwargs):
 
     """
-    Train this neural network.
+    Train the neural network defined above.
+
+    NOTE: args and kwargs can be used to provide extra parameters, such as parameters for data normalization. But the 
+    implementation needs to be able to run without *args or **kwargs because the autograder cannot provide these 
+    arguments. 
 
     args:
       x_train: `np.array((N, D))`, training data of N instances and D features.
@@ -158,6 +167,7 @@ def train(x_train, y_train, x_val, y_val, depth, hidden_sizes, reg_weight, num_t
       reg_weight: float, the regularization strength.
       num_train_epochs: the number of training epochs.
       task_type: string, 'regression' or 'classification', the type of the learning task.
+      extra_inputs: a place h
     returns:
       model: a trained model
       history: training history from tf.keras.Model.fit()
